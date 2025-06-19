@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/plan-trip' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "origin": "Mumbai, India",
+    "destination": "Krabi, Thailand",
+    "start_date": "2025-06-01",
+    "end_date": "2025-06-10",
+    "interests": "2 adults who love swimming, dancing, hiking, shopping, local food, water sports adventures and rock climbing"
+  }'

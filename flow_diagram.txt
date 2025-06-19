@@ -1,0 +1,48 @@
+graph TD
+    A[User Interface] --> B[Streamlit App]
+    B --> C[Input Form]
+    C --> |Collects| D[Trip Details]
+    
+    subgraph "User Input"
+        D --> D1[Origin Location]
+        D --> D2[Destination]
+        D --> D3[Date Range]
+        D --> D4[Interests/Preferences]
+    end
+    
+    D --> E[TripCrew Initialization]
+    
+    subgraph "CrewAI Framework"
+        E --> F[Initialize Agents]
+        F --> |1| G1[City Selection Expert]
+        F --> |2| G2[Local Expert]
+        F --> |3| G3[Travel Concierge]
+        
+        G1 --> H1[Identify Task]
+        G2 --> H2[Gather Task]
+        G3 --> H3[Plan Task]
+        
+        subgraph "Tools Used"
+            I[Tools] --> I1[Browser Tools]
+            I --> I2[Search Tools]
+            I --> I3[Calculator Tools]
+        end
+        
+        H1 --> J[Crew Kickoff]
+        H2 --> J
+        H3 --> J
+    end
+    
+    J --> K[Generate Itinerary]
+    K --> L[Format Response]
+    L --> M[Display Results]
+    
+    subgraph "External APIs"
+        N[API Services] --> N1[Gemini API]
+        N --> N2[Serper API]
+        N --> N3[Browserless API]
+    end
+    
+    I1 --> N3
+    I2 --> N2
+    F --> N1
