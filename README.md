@@ -34,20 +34,14 @@ TripPlanner-AgenticAI leverages agentic AI architecture to coordinate multiple A
 ## 📂 Project Structure
 
 TripPlanner-AgenticAI/
-│
-├── streamlit_app.py # Main Streamlit UI
-├── crew_config.py # Defines agents and tasks
+├── streamlit_app.py            # Main Streamlit UI
+├── crew_config.py              # Defines agents and tasks
 ├── trip_agents/
-│ ├── city_selector.py # City Selection Expert logic
-│ ├── flight_finder.py # Agent to get flight costs
-│ └── attractions_guide.py # Agent to find activities
-│
+│   ├── city_selector.py        # City Selection Expert logic
+│   ├── flight_finder.py        # Agent to get flight costs
+│   └── attractions_guide.py    # Agent to find activities
 ├── utils/
-│ └── helpers.py # Utility functions
-│
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
+│   └── helpers.py              # Utility functions
+├── requirements.txt            # Python dependencies
+└── README.md                   # Project documentation
 
-bash
-Copy
-Edit
